@@ -5,12 +5,23 @@ class Car {
     }
 }
 
+class Mascota {
+    constructor(tipo, name) {
+        this.tipo = tipo;
+        this.name = name;
+    }
+}
+
 class Person {
     constructor(name, age, city, auto) {
         this.name = name;
         this.age = age;
         this.city = city;
         this.auto = auto;
+    }
+
+    hasMascota(){
+        return new Mascota('perro', 'Firulais')
     }
 }
 
