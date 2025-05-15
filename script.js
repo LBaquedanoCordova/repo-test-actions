@@ -14,4 +14,4 @@ class Person {
     }
 }
 
-const person1 = new Person('Tamir Gamboa', 64, 'Lisboa', new Car('Toyota', 2024));
+const person1 = new Person('Santiago Gamboa', 31, 'Madrid', new Car('Lamborghini', 2025));
