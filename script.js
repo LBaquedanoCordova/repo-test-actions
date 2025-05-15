@@ -15,4 +15,3 @@ class Person {
 }
 
 const person1 = new Person('Tamir Gamboa', 64, 'Lisboa', new Car('Toyota', 2024));
-
