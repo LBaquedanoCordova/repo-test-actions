@@ -1,7 +1,7 @@
 class Car {
     constructor(marca, anhio) {
         this.marca = marca;
-        this.anhio = anhio;
+        this.anhio = anhio  ;
     }
 }
 
@@ -13,17 +13,17 @@ class Mascota {
 }
 
 class Person {
-    constructor(name, age, city, auto) {
-        this.name = name;
+    constructor(name, lastname, age, city, auto) {
+             this.name = name;
+        this.lastname = lastname;
         this.age = age;
         this.city = city;
-        this.auto = auto;
+           this.auto = auto;
     }
 
-    hasMascota(){
+    get hasMascota  (){
         return new Mascota('perro', 'Firulais')
     }
 }
 
-const person1 = new Person('Tamir Gamboa', 64, 'Lisboa', new Car('Toyota', 2024));
-
+const person1 = new Person('Santiago Gamboa', 31, 'Lisboa', new Car('Lamborgini', 2025));
