@@ -27,3 +27,4 @@ class Person {
 }
 
 const person1 = new Person('Santiago Gamboa', 31, 'Lisboa', new Car('Lamborgini', 2025));
+
