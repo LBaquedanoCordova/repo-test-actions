@@ -16,3 +16,4 @@ class Person {
 
 const person1 = new Person('Tamir Gamboa', 64, 'Lisboa', new Car('Toyota', 2024));
 const person2 = new Person();
+const person3 = new Person();
