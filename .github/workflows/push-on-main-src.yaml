@@ -1,0 +1,19 @@
+name: Push to main and src path
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Print confirmation
+        run: echo "✅ Este workflow se ejecutó porque hiciste push a 'main' y se modificó algo en 'src/**'"
