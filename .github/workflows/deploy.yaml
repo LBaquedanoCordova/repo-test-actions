@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+    branches:
+      - 'releases/**'
+      - '!releases/**-alpha'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Despliegue simulado
+        run: echo "Desplegando después del workflow 'Build'"

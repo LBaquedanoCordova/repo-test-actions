@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - 'releases/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Simulación de build
+        run: echo "Compilando en la rama ${{ github.ref }}"
