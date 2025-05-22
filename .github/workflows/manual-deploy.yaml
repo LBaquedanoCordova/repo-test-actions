@@ -1,0 +1,48 @@
+# .github/workflows/manual-deploy.yaml
+
+name: Deploy Manual con Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'El entorno al que se desplegará'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+
+      version:
+        description: 'Versión del deploy (ej. v1.2.3)'
+        required: true
+        type: string
+
+      debug_mode:
+        description: '¿Activar modo debug?'
+        required: false
+        type: boolean
+
+jobs:
+  deploy:
+    name: Desplegar en el entorno seleccionado
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar resumen del deploy
+        run: |
+          echo "Entorno seleccionado: ${{ inputs.environment }}"
+          echo "Versión a desplegar: ${{ inputs.version }}"
+          echo "Modo debug activado: ${{ inputs.debug_mode }}"
+
+      - name: Simular pasos de deploy
+        run: |
+          echo "Simulando deploy en ${{ inputs.environment }}..."
+          sleep 2
+          echo "Desplegando versión ${{ inputs.version }} 🚀"
+          if [ "${{ inputs.debug_mode }}" = "true" ]; then
+            echo "Modo debug ACTIVADO 🔍"
+          else
+            echo "Modo debug desactivado"
+          fi
